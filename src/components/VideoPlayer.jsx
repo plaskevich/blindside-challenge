@@ -9,13 +9,17 @@ const Content = styled.div`
   color: #fff;
 `;
 
+const Title = styled.h2`
+  width: 90%;
+`;
+
 export default function VideoPlayer(props) {
   const { video } = props;
   const videoURL = `https://www.dailymotion.com/video/${video.id}`;
   return (
     <Content>
       <ReactPlayer controls url={videoURL} playing width='90%' height='100%' />
-      <h2>{video.title}</h2>
+      <Title>{video.title}</Title>
     </Content>
   );
 }
